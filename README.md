@@ -52,5 +52,5 @@ Exemplo de requisição:
 ```json
 GET /transactions/report?initialDate=01/05/2023&finalDate=31/05/2023
 ```
-
+O relatório será gerado no formato CSV e salvo no arquivo report.csv no diretório raiz do projeto.
 
