@@ -4,6 +4,7 @@ import com.example.cashflow.domain.Transaction;
 import com.example.cashflow.dto.request.TransactionDTO;
 import com.example.cashflow.exception.WrongTypeException;
 import com.example.cashflow.service.TransactionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +16,8 @@ import java.util.List;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
-
+@RestController
+@RequiredArgsConstructor
 @RequestMapping("/transactions")
 public class TransactionController {
 

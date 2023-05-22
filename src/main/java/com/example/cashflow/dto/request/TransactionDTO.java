@@ -1,9 +1,10 @@
 package com.example.cashflow.dto.request;
 
-import javax.persistence.Id;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import lombok.Getter;
 
+import java.math.BigDecimal;
+
+@Getter
 public class TransactionDTO {
 
     private String description;
