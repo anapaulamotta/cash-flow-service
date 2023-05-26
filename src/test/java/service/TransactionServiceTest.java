@@ -1,4 +1,4 @@
-package Service;
+package service;
 
 import com.example.cashflow.enums.TransactionTypeEnum;
 import com.example.cashflow.exception.WrongTypeException;
@@ -12,6 +12,7 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import utils.MockUtils;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -38,4 +39,12 @@ public class TransactionServiceTest {
         verify(repository, times(1)).saveAll(any());
     }
 
+    @Test
+    void whenInsertTransaction_thenThrowException() throws WrongTypeException{
+
+        assertThrows(WrongTypeException.class, () -> {
+            service.insertTransaction(MockUtils.transactionDtoList(), "Crébito");
+        });
+
+    }
 }
