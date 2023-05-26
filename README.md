@@ -20,6 +20,7 @@ Certifique-se de substituir `localhost:5432` pelo endereço e porta corretos do 
 Para executar o projeto, é necessário ter o Java 11 e o Maven instalados.
 
 ## Endpoints disponíveis
+#### pode se acessado via swagger em: http://localhost:8080/swagger-ui.html 
 
 ### Adicionar transação
 
@@ -45,6 +46,7 @@ POST /transactions/credit
 ```
 
 ### Gerar relatório
+
 GET /transactions/report
 Este endpoint permite gerar um relatório das transações registradas. É possível especificar um intervalo de datas para o relatório utilizando os parâmetros initialDate e finalDate no formato "dd/MM/yyyy". Caso nenhum intervalo seja fornecido, o relatório será gerado com as transações do dia atual.
 
@@ -53,4 +55,8 @@ Exemplo de requisição:
 GET /transactions/report?initialDate=01/05/2023&finalDate=31/05/2023
 ```
 O relatório será gerado no formato CSV e salvo no arquivo report.csv no diretório raiz do projeto.
+
+## Desenho da solução
+
+![image](https://github.com/anapaulamotta/cash-flow-service/assets/61715214/977a5d15-e1f8-4a96-8068-c2b211f896f6)
 
